@@ -20,6 +20,16 @@
 
         public static List<string> NonSequentialFizzBuzz(int[] numbers, Dictionary<int, string>? tokens = null) => ProcessFizzBuzz(numbers, tokens ?? defautlTokens);
 
+        public static List<string> TwistedFizzBuzzTokens(int start, int end, Dictionary<int, string> tokens)
+        {
+            if (start > end)
+                (start, end) = (end, start);
+
+            var numbers = Enumerable.Range(start, end);
+
+            return ProcessFizzBuzz(numbers.ToArray(), tokens);
+        }
+
         private static List<string> ProcessFizzBuzz (int[] numbers, Dictionary<int, string> tokens)
         {
             var result = new List<string>();
