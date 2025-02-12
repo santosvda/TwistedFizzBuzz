@@ -23,8 +23,8 @@ The project includes:
 /RegularFizzBuzzConsole       # Standard FizzBuzz implementation
 /TwistedFizzBuzzConsole       # Advanced example with custom tokens
 /TwistedFizzBuzz.Tests        # Unit tests (xUnit)
-  ├── TwistedFizzBuzzTokenTests.cs # Standard tests
-  ├── TwistedFizzRegularTests.cs     # API-based tests with Moq
+  ├── TwistedFizzBuzzTokenTests.cs # Advanced FizzBuzz tests
+  ├── TwistedFizzRegularTests.cs   # Standard tests
   ├── EdgeCaseTests.cs        # Boundary conditions
 ```
 
