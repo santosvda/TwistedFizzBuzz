@@ -2,7 +2,8 @@ using TwistedFizzBuzzLib;
 
 public class TwistedFizzBuzzTokenTests
 {
-    [Fact]
+    [Trait("Twisted", "Twisted FizzBuzz")]
+    [Fact(DisplayName = "Should Work with custom token values")]
     public void TwistedFizzBuzzTokens_ShouldWorkWithCustomValues()
     {
         // Arrange

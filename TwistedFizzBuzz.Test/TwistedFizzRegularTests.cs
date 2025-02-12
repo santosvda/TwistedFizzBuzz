@@ -2,7 +2,8 @@ using TwistedFizzBuzzLib;
 
 public class TwistedFizzRegularTests
 {
-    [Fact]
+    [Trait("Standard", "Standard FizzBuzz")]
+    [Fact(DisplayName = "Return correct sequence")]
     public void RegularFizzBuzz_ShouldReturnCorrectSequence()
     {
         // Arrange
@@ -15,7 +16,8 @@ public class TwistedFizzRegularTests
         Assert.Equal(expected, result);
     }
 
-    [Fact]
+    [Trait("Standard", "Standard FizzBuzz")]
+    [Fact(DisplayName = "Handle Negative sequences of FizzBuzz")]
     public void RegularFizzBuzz_ShouldHandleNegativeNumbers()
     {
         // Arrange
@@ -28,7 +30,8 @@ public class TwistedFizzRegularTests
         Assert.Equal(expected, result);
     }
 
-    [Fact]
+    [Trait("Standard", "Standard FizzBuzz")]
+    [Fact(DisplayName = "Should Work with Non Sequential set of numbers")]
     public void RegularFizzBuzz_ShouldWorkWithNonSequential()
     {
         // Arrange

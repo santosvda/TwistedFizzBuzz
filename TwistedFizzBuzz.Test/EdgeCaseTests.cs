@@ -2,7 +2,8 @@ using TwistedFizzBuzzLib;
 
 public class EdgeCaseTests
 {
-    [Fact]
+    [Trait("EdgeCase", "Entries that are out of the ordinary or expected")]
+    [Fact(DisplayName = "Should handle empty sequence of numbers")]
     public void NonSequentialFizzBuzz_ShouldHandleEmptyInput()
     {
         // Arrange

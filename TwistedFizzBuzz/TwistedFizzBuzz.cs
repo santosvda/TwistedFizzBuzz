@@ -36,7 +36,7 @@ namespace TwistedFizzBuzzLib
                     response.EnsureSuccessStatusCode();
 
                     var json = await response.Content.ReadAsStringAsync();
-                    var newToken = JsonConvert.DeserializeObject<ApiResponse>(json);
+                    var newToken = JsonConvert.DeserializeObject<ApiResponseDto>(json);
 
                     if (newToken != null)
                         tokens[newToken.Number] = newToken.Word;
