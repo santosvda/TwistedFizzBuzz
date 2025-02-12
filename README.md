@@ -63,7 +63,7 @@ var result = await TwistedFizzBuzz.ApiGeneratedTokensFizzBuzz(1, 50);
 
 ### 🔹 Clone the Repository
 ```sh
-git clone https://github.com/yourusername/TwistedFizzBuzz.git
+git clone https://github.com/santosvda/TwistedFizzBuzz.git
 cd TwistedFizzBuzz
 ```
 ### 🔹 Build the Solution
