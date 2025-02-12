@@ -9,8 +9,8 @@ TwistedFizzBuzz is a flexible C# library that extends the classic FizzBuzz probl
 
 The project includes:
 - **TwistedFizzBuzz Library**: Core logic for generating FizzBuzz sequences
-- **FizzBuzzConsoleApp**: A basic console application implementing standard FizzBuzz
-- **TwistedConsoleApp**: A more advanced console application demonstrating custom divisors and tokens
+- **RegularFizzBuzzConsole**: A basic console application implementing standard FizzBuzz
+- **TwistedFizzBuzzConsole**: A more advanced console application demonstrating custom divisors and tokens
 - **TwistedFizzBuzz.Tests**: Unit tests ensuring correctness
 
 ---
@@ -19,14 +19,13 @@ The project includes:
 ```
 /TwistedFizzBuzzLib           # Core library
   ├── TwistedFizzBuzz.cs      # Main logic
-  ├── Dto/ApiResponse.cs      # API response model
-/FizzBuzzConsoleApp           # Standard FizzBuzz implementation
-/TwistedConsoleApp            # Advanced example with custom tokens
+  ├── Dto/ApiResponseDto.cs   # API response model
+/RegularFizzBuzzConsole       # Standard FizzBuzz implementation
+/TwistedFizzBuzzConsole       # Advanced example with custom tokens
 /TwistedFizzBuzz.Tests        # Unit tests (xUnit)
-  ├── TwistedFizzBuzzTests.cs # Standard tests
-  ├── ApiFizzBuzzTests.cs     # API-based tests with Moq
+  ├── TwistedFizzBuzzTokenTests.cs # Advanced FizzBuzz tests
+  ├── TwistedFizzRegularTests.cs   # Standard tests
   ├── EdgeCaseTests.cs        # Boundary conditions
-  ├── ProcessFizzBuzzTests.cs # Core processing logic tests
 ```
 
 ---
@@ -63,7 +62,7 @@ var result = await TwistedFizzBuzz.ApiGeneratedTokensFizzBuzz(1, 50);
 
 ### 🔹 Clone the Repository
 ```sh
-git clone https://github.com/yourusername/TwistedFizzBuzz.git
+git clone https://github.com/santosvda/TwistedFizzBuzz.git
 cd TwistedFizzBuzz
 ```
 ### 🔹 Build the Solution
@@ -72,9 +71,9 @@ dotnet build
 ```
 ### 🔹 Run Console Applications
 ```sh
-dotnet run --project FizzBuzzConsoleApp
+dotnet run --project RegularFizzBuzzConsole
 
-dotnet run --project TwistedConsoleApp
+dotnet run --project TwistedFizzBuzzConsole
 ```
 ### 🔹 Run Tests
 ```sh
