@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using TwistedFizzBuzzLib;
+
+var list = TwistedFizzBuzz.NormalFizzBuzz(1, 20);
+var result = string.Join(",", list);
+
+Console.WriteLine(result);
