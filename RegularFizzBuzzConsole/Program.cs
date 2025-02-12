@@ -1,10 +1,37 @@
-﻿using TwistedFizzBuzzLib;
+﻿using System.Diagnostics;
+using TwistedFizzBuzzLib;
 
-Console.WriteLine("Regular FizzBuzz: \n");
-var regular = TwistedFizzBuzz.RegularFizzBuzz(1, 20);
-Console.WriteLine(string.Join(",", regular) + "\n");
+Console.WriteLine("===== Regular FizzBuzz =====\n");
 
-Console.WriteLine("Non-sequential FizzBuzz: \n");
-var nonSequential = TwistedFizzBuzz.NonSequentialFizzBuzz(new int[] { 1, 4, -12, -5, 6, 300, 12, 15 });
-Console.WriteLine(string.Join(",", nonSequential));
+RunRegularFizzBuzz();
+RunNonSequentialFizzBuzz();
 
+Console.WriteLine("\n===== Execution Complete =====");
+
+static void RunRegularFizzBuzz()
+{
+    var (start, end) = (1, 100);
+    Console.WriteLine($"Regular FizzBuzz ({start} to {end}):\n");
+
+    var stopwatch = Stopwatch.StartNew();
+    var regular = TwistedFizzBuzz.RegularFizzBuzz(1, 100);
+    stopwatch.Stop();
+
+    Console.WriteLine($"Result: {string.Join(", ", regular)}");
+    Console.WriteLine($"Execution Time: {stopwatch.ElapsedMilliseconds} ms\n");
+}
+
+static void RunNonSequentialFizzBuzz()
+{
+    Console.WriteLine("Non-Sequential FizzBuzz:\n");
+
+    int[] numbers = { 1, 4, -12, -5, 6, 300, 12, 15 };
+
+    var stopwatch = Stopwatch.StartNew();
+    var nonSequential = TwistedFizzBuzz.NonSequentialFizzBuzz(numbers);
+    stopwatch.Stop();
+
+    Console.WriteLine($"Input: {string.Join(", ", numbers)}");
+    Console.WriteLine($"Result: {string.Join(", ", nonSequential)}");
+    Console.WriteLine($"Execution Time: {stopwatch.ElapsedMilliseconds} ms\n");
+}
