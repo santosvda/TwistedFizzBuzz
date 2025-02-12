@@ -35,7 +35,7 @@ namespace TwistedFizzBuzzLib
                 newToken = null;
             }
             if (!tokens.Any())
-                throw new Exception("Unnable to connect to the API server");
+                throw new Exception("Unable to connect to the API server");
 
             return ProcessFizzBuzz(OrderNumbers(start, end), tokens);
         }
@@ -66,7 +66,7 @@ namespace TwistedFizzBuzzLib
             if (start > end)
                 (start, end) = (end, start);
 
-            return Enumerable.Range(start, end).ToArray();
+            return Enumerable.Range(start, (end - start) + 1).ToArray();
         }
     }
 }
