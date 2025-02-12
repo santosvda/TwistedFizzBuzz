@@ -58,7 +58,7 @@ var result = await TwistedFizzBuzz.ApiGeneratedTokensFizzBuzz(1, 50);
 
 ## 🛠 Setup & Installation
 ### 🔹 Prerequisites
-- .NET 6 SDK or later
+- .NET 9 SDK or later
 
 ### 🔹 Clone the Repository
 ```sh
